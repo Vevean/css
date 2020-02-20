@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background:pink url("images/QQ图片20200101221107.jpg") no-repeat fixed;
+            background-size:cover;
+        }
+        ul{
+            width:200px;
+            height:150px;
+           position:absolute;
+           left:50%;
+           margin-left:200px;
+           bottom:130px;
+           transform-style:preserve-3d;
+           animation:move 12s linear 0s  infinite  normal;
+           
+        }
+        @keyframes move{
+            from{
+                transform:rotateX(-10deg) rotateY(0deg);
+            }
+            to{
+                transform:rotateX(-10deg) rotateY(360deg);
+            }
+        }
+        ul li{
+            width:200px;
+            height:150px;
+            border: 1px solid #000;
+            position:absolute;
+            left:0;
+            top:0;
+            border: 5px solid white;
+            box-sizing:boder-box;
+            background-color: black;
+        }
+        ul:hover{
+            animation-play-state:paused;
+        }
+        ul:hover li img{
+            opacity:0.5;
+        }
+        ul li:hover img{
+            opacity:1;
+        }
+        ul li img{
+            width:200px;
+            height:150px;
+        }
+        ul li:nth-child(1){
+            background-color: black;
+            transform:rotateY(60deg) translateZ(200px) ;
+
+        }
+        ul li:nth-child(2){
+            background-color: black;
+            transform:rotateY(120deg) translateZ(200px);
+        }
+        ul li:nth-child(3){
+            background-color:black;
+            transform:rotateY(180deg) translateZ(200px) ;
+        }
+        ul li:nth-child(4){
+            background-color: black;
+            transform:rotateY(240deg) translateZ(200px);
+        
+        }
+        ul li:nth-child(5){
+            background-color:black;
+            transform:rotateY(300deg) translateZ(200px);
+        }
+        ul li:nth-child(6){
+            background-color:black;
+            transform:rotateY(360deg) translateZ(200px);
+        }
+        .bili{
+            width:50px;
+            height:50px;
+            animation:bi 5s linear 0s infinite normal;
+            position:absolute;
+            left:0;
+            bottom:100px;
+        }
+        @keyframes bi{
+            0%{
+                left:0;
+                top:100px;
+            }
+            25%{
+                left:300px;
+                top:100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><img src="images/QQ图片20191204234833.jpg"></li>
+        <li><img src="images/QQ图片20191204234857.jpg"></li>
+        <li><img src="images/QQ图片20200101220745.jpg"></li>
+        <li><img src="images/QQ图片20200101221107.jpg"></li>
+        <li><img src="images/QQ图片20200101221114.jpg"></li>
+        <li><img src="images/QQ图片20191204234943.jpg"></li>
+    </ul>
+    <img src="images/扑克牌.jpg" class="bili">
+    <audio src="images/封茗囧菌 - 遇见你的时候所有星星都落到我头上.mp3" autoplay="autoplay" loop="loop"></audio>
+</body>
+</html>
