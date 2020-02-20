@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        div{
+            width:300px;
+            height:300px;
+            margin:0 auto;
+            margin-top:100px;
+            border: 2px solid #ccc;
+            position:relative;
+        }
+        div img{
+            width:300px;
+            height:200px;
+        }
+        div .hot{
+            height:34px;
+            width:35px;
+            background:url("images/团购界面.png") no-repeat 0px -86px;
+           /* display:inline-block;*/
+           position:absolute;
+           left:0;
+           top:0;
+        }
+        div .price{
+            height:27px;
+            width:98px;
+            background:url("images/团购界面.png") no-repeat 0px -147px;
+            display:inline-block;
+            position:absolute;
+            left:0;
+            top:173px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="images/timg.jpg">
+        <p>茉莉花或白色相思梅0.3扎，柳叶桉适量,
+            我会一直在你身旁，给你如沐春风般的温暖。</p>
+        <span class="hot"></span>
+        <span class="price"></span>
+    </div>
+</body>
+</html>
