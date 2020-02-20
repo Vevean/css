@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            height:400px;
+            background-color: skyblue;
+            margin-top:100px;
+            animation:change 5s linear 0s infinite alternate;
+            position:relative;
+        }
+        ul li{
+            height:100%;
+            width:100%;
+            position:absolute;
+            left:0;
+            top:0;
+        }
+        ul li:nth-child(1){
+            background-image:url("images/云层1.jpg");
+        }
+        ul li:nth-child(2){
+            background-image:url("images/云层2.jpg");
+        }
+        ul li:nth-child(3){
+            background-image:url("images/云层3.jpg");
+        }
+        @keyframes change{
+            from{
+                background-color: skyblue;
+            }
+            to{
+                background-color:black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

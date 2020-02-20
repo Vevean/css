@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    div{
+        width:500px;/*width:1000px*/
+        height:280px;
+        background-color: pink;
+        margin:0 auto;
+        margin-top:100px;
+        overflow:hidden;
+    }
+    ul{
+        width:2000px;
+        height:280px;
+        background-color: black;
+        animation:move 5s linear 0s infinite normal;
+    }
+    @keyframes move{
+        from{
+            margin-left:0;
+        }
+        to{
+            margin-left:-1000px;
+        }
+    }
+    ul li{
+        list-style:none;
+        width:500px;
+        height:280px;
+        border: 1px solid #000;
+        background-color: red;
+        box-sizing:border-box;
+        float:left;
+        
+    }
+    ul:hover{
+        animation-play-state:paused;
+    }
+    ul:hover li{
+        opacity:0.5;
+    }
+    ul li:hover{
+        opacity:1;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><img src="images/手风琴1.webp"></li>
+            <li><img src="images/手风琴2.webp"></li>
+            <li><img src="images/手风琴3.jpg"></li>
+            <li><img src="images/手风琴4.jpg"></li>
+            <li><img src="images/手风琴1.png"></li>
+            <li><img src="images/手风琴2.jpg"></li>
+        </ul>
+    </div>
+</body>
+</html>

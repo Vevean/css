@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>微博-随时随地发现新鲜事</title>
+    <link rel="icon" href="images/bitbug_favicon(1).ico" type="image/x-icon">
+    <link rel="stylesheet" href="images\font_1635774_26sarlj6sry\iconfont.css">
+    <style>
+              body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td
+    {
+        margin:0;padding:0;
+        color:#696e78;
+        font-size:12px;
+    }
+    a{
+        text-decoration:none;
+        color:#696e78;
+        font-size:12px ;
+    }
+    i{
+        font-size:24px;
+        font-weight:bold;
+        color:#696e78;
+    }
+    a:hover{
+        color:#eb7350;
+    }
+    i:hover{
+        color:#eb7350;
+    }
+    .header{
+        width:100%;
+        height:48px;
+        background-color:white;
+        border-top: 2px solid #fa7d3c;
+        box-sizing:boder-box;
+        position:fixed;
+        z-index:1;
+    }
+    .logo{
+        width:140px;
+        height:48px;
+        float:left;
+        margin-left:130px;
+        margin-top:10px;
+        background:url("https://img.t.sinajs.cn/t6/style/images/global_nav/WB_logo.png?id=1404211047727") no-repeat;
+    }
+    .logo a{
+        display:inline-block;
+        width:140px;
+        height:48px;
+    }
+    .kuang{
+        width:165px;
+        height:20px;
+        border: 1.5px solid #808080;
+        padding: 4px 33px 4px 10px;
+        margin-top:10px;
+        position:absolute;
+    }
+    .links{
+        float:right;
+        line-height:48px;
+        margin-right:165px;
+    }
+    button{
+        height:25px;
+        margin-top:13px;
+        position:absolute;
+        left:455px;
+        cursor:pointer;
+        background: transparent;
+        border:none;
+    }
+    /*.kuang:focus{
+        outline:none;
+        border: 1.5px solid #eb7350;
+    }*/
+    .content .bars{
+        /*border: 1px solid #000;*/
+        line-height:40px;
+        text-align:center;
+        padding: 0 8px;
+        list-style:none;
+        position:fixed;
+    }
+    .bars li{
+        width:110px;
+        height:40px;
+        font-size:18px;
+        border-radius: 3px;
+        color:#000;
+    }
+    .remen{
+        background-color:#fa2f2f;
+        color:white;
+    }
+    .bars li:hover{
+        background-color:#fa2f2f;
+        color:white;
+    }
+    .content{
+        padding:64px 35px 0 35px;
+        width:1170px;
+        height:3000px;
+        background-color:white;
+        margin:0 auto;
+    }
+    .nav{
+        width: 660px;
+        height: 300px;
+        background-color:black;
+        margin-left:145px;
+        overflow:hidden;
+    }
+    .nav ul{
+        list-style:none;
+        width:3300px;
+        height:300px;
+        animation:move 40s linear 0s infinite normal;
+    }
+    .nav ul:hover{
+        animation-play-state:paused;
+    }
+    .nav ul:hover li{
+        opacity:0.5;
+    }
+    .nav ul li:hover{
+        opacity:1;
+    }
+    @keyframes move{
+        from{
+            margin-left:0;
+        }
+        to{
+            margin-left:-2500px;
+        }
+    }
+    .nav ul li{
+        width: 660px;
+        height: 300px;
+        float:left;
+    }
+    .nav img{
+        width:660px;
+        height:300px;
+    }
+    .unlogin{
+        width:340px;
+        height:323px;
+        background:#f2f2f2;
+        float:right;
+        position:absolute;
+        right:0;
+        top:0;
+        margin:64px 35px;
+    }
+    .login{
+        width:300px;
+        height:286px;
+        background-color:white;
+        margin:0 auto;
+        margin-top:16px;
+    }
+    div .k{
+        width:270px;
+        height:34px;
+        border: 1.5px solid #808080;
+        margin-left:7px;
+    }
+    input:focus{
+        outline:none;
+        border: 1.5px solid #eb7350;
+    }
+    .kuang1{
+        margin-left:px;
+    }
+    .kuang1 a{
+        color:#eb7350;
+    }
+    .kuang1 i{
+        color:#eb7350;
+    }
+    .kuang1 .dl{
+        width:270px;
+        height:34px;
+        display:block;
+        color:white;
+        line-height:34px;
+        margin:0 auto;
+        text-align:center;
+        background-color:#eb7350;
+    }
+    .kuang1 img{
+        height:28px;
+        position:absolute;
+        left:32px;
+        top:40px;
+    }
+    div .head{
+        color:black;
+        font-size:14px;
+        line-height: 30px;
+        font-weight: 700;
+        margin-left:70px;
+        line-height:20px;
+       padding:11px;
+       
+    }
+    .father{
+        background-color:white;
+        width:340px;
+        height:2206.89px;
+        position:absolute;
+        right:0;
+        top:343px;;
+        margin:64px 35px;
+        overflow:hidden;
+    }
+    .box1{
+        width:340px;
+        height:420.33px;
+        background-color: #f2f2f2;
+        padding:20px;
+        border-top: 2px solid #eb735e;
+    }
+    .father p{
+        font-size:18px;
+        color:black;
+        font-weight:700;
+    }
+    .father a{
+        font-size:14px;
+        display:block;
+        font-weight:normal;
+        color:#333333;
+        text-overflow:ellipsis;
+        overflow:hidden;
+        white-space:nowrap;
+        width:230px;
+    }
+    .father .flow{
+        text-overflow:ellipsis;
+        overflow:hidden;
+        white-space:nowrap;
+        width:230px;
+    }
+    .father a:hover{
+        color:#eb7350;
+    }
+    .father img{
+        width:50px;
+        height:50px;
+        position:absolute;
+        margin-top:20px;
+    }
+    .kuang2{
+        width:230px;
+        height:43.67px;
+        margin-left:60px;
+        margin-top:25px;
+    }
+    .scan{
+        width:340px;
+        height:33.22px;
+        text-align:center;
+    }
+    .flow{
+        width:238px;
+        height:18px;
+        cursor:pointer;
+        margin-top:5px;
+    }
+    .box2{
+        margin-top:20px;
+        width:340px;
+        height:420.33px;
+        background-color: #f2f2f2;
+        padding:20px;
+        border-top: 2px solid #eb735e;
+    }
+    .box3{
+        margin-top:20px;
+        width:340px;
+        height:835.33px;
+        background-color: #f2f2f2;
+        padding:20px;
+        border-top: 2px solid #eb735e;
+    }
+    .box3 a{
+        display:inline;
+        font-size:12px;
+        color:#333333;
+        
+    }
+    .box3 ul{
+        list-style:none;
+    }
+    .box3 .list1{
+        width:300px;
+        height:70.67px;
+    }
+    .box3 .list2{
+        height:212px;
+        width:300px;
+    }
+    .box3 .list3{
+        width:300px;
+        height:247.33px
+    }
+    .box3 .list4{
+        width:300px;
+        height:72px;
+    }
+    .box3 li{
+        width:99.9px;
+        height:15.33px;
+        float:left;
+        margin-top:20px;
+    }
+    .box3 h3{
+        color:#808080;
+        font-size:16px;
+    }
+    .box4{
+        margin-top:20px;
+        width:340px;
+        height:56.89px;
+        background-color: #f2f2f2;
+        padding:20px;
+        border-top: 2px solid #eb735e;
+        font-size:12px;
+        color:#333333;
+    }
+    
+    .f1{
+        width:1000px;
+        height:153.67px;
+        background-color: white;
+        margin-left:140px;
+        padding:20px 0 10px 80px;
+        margin:0 136.77px;
+    }
+    .f1 dl{
+        float:left;
+        width:220px;
+        height:153.67px;
+        text-align:center;
+    }
+    .f1 dt{
+        font-size:16px;
+        color:#333333;
+        width:138px;
+        height:35.67px;
+        text-align:left;
+    }
+    .f1 dd{
+        text-align:left;
+    }
+    .f1 span{
+        float:left;
+        width:50px;
+        height:15.33px;
+        margin:0 20px 5px 0;
+    }
+    .f1 img{
+        width:69px;
+        height:69px;
+    }
+    .f2{
+        background-color:#F2F2F5;
+        width:1263.33px;
+        height:137.67px;
+        margin-left:px;
+    }
+    .f2 p{
+        width:1263.33px;
+        height:19.67px;
+        margin:0 0 10px 0;
+        text-align:center;
+    }
+    .f2 span{
+        margin-left:10px;
+    }
+    .f2 img{
+        width:16px;
+        height:16px;
+    }
+    .news{
+        width:660px;
+        height:2700px;
+        background-color:;
+        margin-left:145px;
+        margin-top:50px;
+    }
+    .news .kuang3{
+        height:200px;
+        cursor:pointer;
+
+    }
+    .kuang3 .p1{
+        width:330.66px;
+        height:184px;
+        margin-top:10px;
+    }
+    .kuang3 .s1{
+        position:absolute;
+        margin-top:10px;
+        margin-left:10px;
+        width:320px;
+        height:184px;
+        color:#333333;
+        font-size:14px;
+        line-height:24px;
+    }
+    .kuang3 .s2{
+        position:absolute;
+        margin-top:152.5px;
+        margin-left:40px;
+    
+    }
+    .s3{
+        width:80px;
+        height:20px;
+        margin-left:10px;
+        margin-right:10px;
+    }
+    .kuang3 .s4{
+        margin-left:95px;
+    }
+    .news a{
+        color:#fa2f2f;
+        font-size:14px;
+        display:
+    }
+    .yuan{
+        border-radius:50%;
+        width:20px;
+        height:20px;
+        position:absolute;
+        margin-top:150px;
+        margin-left:10px;
+    }
+    .yuan1{
+        border-radius:50%;
+        width:20px;
+        height:20px;
+        position:absolute;
+        margin-top:60px;
+        margin-left:10px;
+    }
+    .yuan2{
+        border-radius:50%;
+        width:20px;
+        height:20px;
+        /*position:absolute;
+        margin-top:160px;
+        margin-right:30px;*/
+        margin-top:60px;
+        margin-left:5px;
+    }
+    .video{
+        width:50px;
+        height:50px;
+        position:absolute;
+        margin-top:80px;
+        margin-left:150.33px;
+    }
+    .kuang4{
+        width:660px;
+        height:113px;
+    }
+    .k4{
+        width:158px;
+        height:102px;
+        margin-top:5px;
+    }
+    .s5{
+        color:#333333;
+        position:absolute;
+        font-size:14px;
+        margin-left:10px;
+        margin-top:25px;
+    }
+    .la{
+        color:#fa2f2f;
+    }
+    .s6{
+        position:absolute;
+        margin-top:62px;
+        margin-left:40px;
+    }
+    .s7{
+        margin-left:270px;
+        position:absolute;
+        margin-top:62px;
+    }
+    .kuang4{
+        cursor:pointer;
+    }
+    .kuang5{
+        width:660px;
+        height:177px;
+        cursor:pointer;
+    }
+    .kuang5 li{
+        width:158px;
+        list-style:none;
+        height:102px;
+        padding-left:5px;
+        float:left;
+    }
+    .kuang5 li img{
+        width:158px;
+        height:102px;
+        margin-top:55px;
+    }
+    .s8{
+        position:absolute;
+        margin-top:60px;
+        margin-left:5px;
+    
+    }
+    .s9{
+        margin-left:400px;
+
+    }
+    .yonghu{
+        position:absolute;
+        left:37px;
+        top:70px;
+    }
+    .yonghu i{
+        color: #808080;
+    }
+    .mima i{
+        color:#808080;
+    }
+    .mima{
+        position:absolute;
+        left:37px;
+        top:120px;
+    }
+    .kuang1 input{
+        padding-left:24px;
+    }
+    .zd{
+        background-color:#333;
+        width:31px;
+        height:31px;
+        position:absolute;
+        left:1220px;
+        text-align:center;
+        line-height:31px;
+        opacity: 0.5;
+    }
+    .sx{
+        background-color:#333;
+        width:31px;
+        height:31px;
+        position:fixed;
+        left:1230px;
+        text-align:center;
+        line-height:31px;
+        opacity: 0.5;
+        float:right;
+    }
+    .sx i{
+        font-size:20px;
+        color:white;
+    }
+    .zd i{
+        font-size:20px;
+        color:white;
+    }
+    .footer{
+        margin:0 auto;
+    }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <span style="cursor:pointer"><a href="#"></a></span>
+        </div>
+        <div>
+            <form>
+            <input type="text" placeholder="大家正在搜:锦衣之下" class="kuang">
+            <button type="submit"><i class="iconfont icon-sousuo"></i></button>
+            </form>
+        </div>
+        <div class="links">
+            <a href="#"><i class="iconfont icon-zhuye"> 首页</i></a>&nbsp&nbsp
+            <a href="#"><i class="iconfont icon-shipin"> 视频</i></a>&nbsp&nbsp
+            <a href="#"><i class="iconfont icon-faxian"> 发现</i></a>&nbsp&nbsp
+            <a href="#"><i class="iconfont icon-youxi1"> 游戏</i></a>&nbsp&nbsp&nbsp&nbsp
+            <a href="#">注册</a>&nbsp&nbsp
+            <span>|</span>
+            &nbsp&nbsp
+            <a href="#">登录</a>
+        </div>
+    </div>
+    <div class="content" id="tou">
+        <ul class="bars">
+            <a href="#"><li class="remen">热门</li></a>
+            <a href="#"><li>头条</li></a>
+            <a href="#"><li>视频</li></a>
+            <a href="#"><li>榜单</li></a>
+            <a href="#"><li>搞笑</li></a>
+            <a href="#"><li>社会</li></a>
+            <a href="#"><li>时尚</li></a>
+            <a href="#"><li>电影</li></a>
+            <a href="#"><li>美女</li></a>
+            <a href="#"><li>体育</li></a>
+            <a href="#"><li>动漫</li></a>
+        </ul>
+        <div>
+            <div class="nav">
+            <ul>
+                <li><a href="#"><img src="images/轮播图3.png"></a></li>
+                <li><a href="#"><img src="images/轮播图1.png"></a></li>
+                <li><a href="#"><img src="images/轮播图2.png"></a></li>
+                <li><a href="#"><img src="images/轮播图4.png"></a></li>
+                <li><a href="#"><img src="images/轮播图5.png"></a></li>
+                <li><a href="#"><img src="images/轮播图3.png"></a></li>
+                <li><a href="#"><img src="images/轮播图1.png"></a></li>
+            </ul>
+            </div>
+            <div class="news">
+                <span class="sx"><a href="#"><i class="iconfont icon-shuaxin"></i></a></span>
+                <div class="kuang3">
+                    <img src="images/bofang.png" class="video">
+                    <img src="https://wx2.sinaimg.cn/crop.0.39.1728.961/0075ghRwgy1gbtossyhl1j31c00u0tcu.jpg" class="p1">
+                    <span class="s1">
+                        <a href="#">#施柏宇朴叙俊想见你混剪#</a>
+                        绝了牛批，他俩真的可以互相魂穿毫无违和感！！！！！（UP主：Caihaha_）设定大概是两个长相一样的人在不同时空却有着对方的记忆，然后一步一步找到记忆里的真相《who are you》（伪电影预告）
+                    </span>
+                    <img src="images/yuanjiao3.jpg" class="yuan">
+                    <span class="s2">带你逛B站 2月12日 14:34</span>
+                    <span class="s4"><span class="s3"><a href="#"><i class="iconfont icon-zhuanfa"></i></a>49764</span> | <span class="s3"><a href="#"><i class="iconfont icon-tubiao-"></i></a>45674</span> |<span class="s3"><a href="#"><i class="iconfont icon-icon_good"></i></a>78908</span></span>
+                </div>
+                <hr>
+                <div class="kuang4">
+                    <img src="images/hst2.png" class="k4">
+                    <span class="s5">明日，时运亨通大吉昌 ​​​​  。</span>
+                    <img src="images/tuxiang2.jpg" class="yuan1">
+                    <span  class="s6">赵奶奶- 2月12日 23:15 </span>
+                    <span class="s7"><span class="s3"><a href="#"><i class="iconfont icon-zhuanfa"></i></a>49764</span> | <span class="s3"><a href="#"><i class="iconfont icon-tubiao-"></i></a>45674</span> |<span class="s3"><a href="#"><i class="iconfont icon-icon_good"></i></a>78908</span></span>
+                </div>
+                <hr>
+                <div class="kuang5">
+                    <span class="s5"><a href="#">#情侣头像#</a>萌系蜡笔小新情侣头像~ | cr.阿YAN咯 ​​​​</span>
+                    <ul>
+                    <li><img src="images/tp5.jpg"></li><li><img src="images/tp6.jpg"></li><li><img src="images/tp7.jpg"></li><li><img src="images/tp8.jpg"></li>
+                    </ul>
+                    <img src="images/tx2.jpg" class="yuan2">
+                    <span  class="s8">超甜句 2月14日 20:10</span>
+                    <span class="s9"><span class="s3"><a href="#"><i class="iconfont icon-zhuanfa"></i></a>49764</span> | <span class="s3"><a href="#"><i class="iconfont icon-tubiao-"></i></a>45674</span> |<span class="s3"><a href="#"><i class="iconfont icon-icon_good"></i></a>78908</span></span>
+                </div>
+                <hr>
+                <div class="kuang3">
+                    <img src="images/bofang.png" class="video">
+                    <img src="https://wx3.sinaimg.cn/orj480/9e5389bbly1gbuexrv5nvj21hc0u0b29.jpg" class="p1">
+                    <span class="s1">
+                        <a href="#">#俄外交部发言人用中文为中国加油#</a>
+                        当地时间12日，俄罗斯外交部发言人扎哈罗娃在例行新闻发布会上用中文声援中国抗击疫情。"在这个艰难的时刻，俄罗斯与中国同在，俄罗斯对中国人民表示诚挚支持，并祝愿中国人民取得最终胜利！"
+                    </span>
+                    <img src="images/圆角3.jpg" class="yuan">
+                    <span  class="s2">中国日报 2月12日 14:41</span>
+                    <span class="s4"><span class="s3"><a href="#"><i class="iconfont icon-zhuanfa"></i></a>49764</span> | <span class="s3"><a href="#"><i class="iconfont icon-tubiao-"></i></a>45674</span> |<span class="s3"><a href="#"><i class="iconfont icon-icon_good"></i></a>78908</span></span>
+                </div>
+                <hr>
+                <div class="kuang3">
+                    <img src="images/bofang.png" class="video">
+                    <img src="https://wx4.sinaimg.cn/large/6ea15bbfly1gbthi6ym88j20hs0m8gn8.jpg" class="p1">
+                    <span class="s1">
+                        【大鱼在梦境的缝隙里游过】科幻作品中常有鲸在天上飞的设定，巨大如一座城市的鲸群展开翅膀，鸣叫着游过天空的场景，或许你也曾幻想过。为呼吁反对捕鲸，俄罗斯艺术家brickspacer利用视觉效果把这一幕变成了现实。
+                    </span>
+                    <img src="images/yuanjiao1.jpg" class="yuan">
+                    <span  class="s2">艺术家 2月12日 20:10</span>
+                    <span class="s4"><span class="s3"><a href="#"><i class="iconfont icon-zhuanfa"></i></a>49764</span> | <span class="s3"><a href="#"><i class="iconfont icon-tubiao-"></i></a>45674</span> |<span class="s3"><a href="#"><i class="iconfont icon-icon_good"></i></a>78908</span></span>
+                </div>
+                <hr>
+                <div class="kuang3">
+                    <img src="images/bofang.png" class="video">
+                    <img src="https://wx2.sinaimg.cn/crop.164.0.1941.1080/5a899759ly1gbuknquhroj21yo0u0npe.jpg" class="p1">
+                    <span class="s1">
+                        <a href="#">#勇气即光芒#</a>
+                        声画交错，少年与光同时出现。游走于镜像中，是沉稳的剪影，是澄澈的透明，更是融进血液中的高燃。守不变的初心，和@UNIQ-王一博 一起从#时尚COSMO3月刊#出发，每一步都是希望。
+                    </span>
+                    <img src="images/yuanjiao2.jpg" class="yuan">
+                    <span  class="s2">时尚COSMO3 2月12日 14:36</span>
+                    <span class="s4"><span class="s3"><a href="#"><i class="iconfont icon-zhuanfa"></i></a>49764</span> | <span class="s3"><a href="#"><i class="iconfont icon-tubiao-"></i></a>45674</span> |<span class="s3"><a href="#"><i class="iconfont icon-icon_good"></i></a>78908</span></span>
+                </div>
+                <hr>
+                <div class="kuang3">
+                    <img src="images/bofang.png" class="video">
+                    <img src="https://ww1.sinaimg.cn/bmiddle/6bcdae4cgy1gbja6ptlg8j21hc0u0n8n.jpg" class="p1">
+                    <span class="s1">
+                        <a href="#">#锦衣之下大结局#</a>
+                        今天锦衣就要收官了 但今夏一定会在平行世界好好的甜甜美美的生活 你们要相信陆大人会对她很好 很好的！今夏是我很喜欢的女生  感恩 愿大家都有金甲神人护佑 逢凶化吉遇难成祥
+                    </span>
+                    <img src="images/yuanjiao4.jpg" class="yuan">
+                    <span  class="s2">沈信得 2月12日 20:22</span>
+                    <span class="s4"><span class="s3"><a href="#"><i class="iconfont icon-zhuanfa"></i></a>49764</span> | <span class="s3"><a href="#"><i class="iconfont icon-tubiao-"></i></a>45674</span> |<span class="s3"><a href="#"><i class="iconfont icon-icon_good"></i></a>78908</span></span>
+                </div>
+                <hr>
+                <div class="kuang4">
+                    <img src="images/hst1.jpg" class="k4">
+                    <span class="s5"><a href="#">#抗疫行动# #手写加油接力# </a>
+                    致敬所有一线医务人员，你们辛苦了！ <a href="#"><i class="iconfont icon-lianjie la"></i>绿洲</a> ​​​​</span>
+                    <img src="images/tuxiang1.jpg" class="yuan1">
+                    <span  class="s6">UNINE_何昶Chang希 2月13日 13:45</span>
+                    <span class="s7"><span class="s3"><a href="#"><i class="iconfont icon-zhuanfa"></i></a>49764</span> | <span class="s3"><a href="#"><i class="iconfont icon-tubiao-"></i></a>45674</span> |<span class="s3"><a href="#"><i class="iconfont icon-icon_good"></i></a>78908</span></span>
+                </div>
+                <hr>
+                <div class="kuang4">
+                    <img src="images/hst3.jpg" class="k4">
+                    <span class="s5">最近的健身项目～<a href="#"><i class="iconfont icon-lianjie la"></i>绿洲</a> ​​​​</span>
+                    <img src="images/tuxiang3.jpg" class="yuan1">
+                    <span  class="s6">Dear-迪丽热巴  2月13日 10:02  </span>
+                    <span class="s7"><span class="s3"><a href="#"><i class="iconfont icon-zhuanfa"></i></a>49764</span> | <span class="s3"><a href="#"><i class="iconfont icon-tubiao-"></i></a>45674</span> |<span class="s3"><a href="#"><i class="iconfont icon-icon_good"></i></a>78908</span></span>
+                </div>
+                <hr>
+                <div class="kuang4">
+                    <img src="images/hst4.jpg" class="k4">
+                    <span class="s5">长江日报评论员的新题材，又来了。 </span>
+                    <img src="images/tuxiang4.jpg" class="yuan1">
+                    <span  class="s6">何兵 2月12日 23:15 </span>
+                    <span class="s7"><span class="s3"><a href="#"><i class="iconfont icon-zhuanfa"></i></a>49764</span> | <span class="s3"><a href="#"><i class="iconfont icon-tubiao-"></i></a>45674</span> |<span class="s3"><a href="#"><i class="iconfont icon-icon_good"></i></a>78908</span></span>
+                </div>
+                <hr>
+                <div class="kuang4">
+                    <img src="images/hst5.jpg" class="k4">
+                    <span class="s5">马上要全国性降温了，大家注意保暖，尤其是在一线的，千万多注意！ ​​​​</span>
+                    <img src="images/tuxiang5.jpg" class="yuan1">
+                    <span  class="s6">蜘蛛猴面包 2月12日 23:15 </span>
+                    <span class="s7"><span class="s3"><a href="#"><i class="iconfont icon-zhuanfa"></i></a>49764</span> | <span class="s3"><a href="#"><i class="iconfont icon-tubiao-"></i></a>45674</span> |<span class="s3"><a href="#"><i class="iconfont icon-icon_good"></i></a>78908</span></span>
+                </div>
+                <hr>
+                <div class="kuang5">
+                    <span class="s5">【网友投稿】“人民需要什么，五菱就造什么”<a href="#">#战疫历史记录# ​​​</a></span>
+                    <ul>
+                    <li><img src="images/tp1.jpg"></li><li><img src="images/tp2.jpg"></li><li><img src="images/tp3.jpg"></li><li><img src="images/tp4.jpg"></li>
+                    </ul>
+                    <img src="images/tx1.jpg" class="yuan2">
+                    <span  class="s8">艺术家 2月12日 20:10</span>
+                    <span class="s9"><span class="s3"><a href="#"><i class="iconfont icon-zhuanfa"></i></a>49764</span> | <span class="s3"><a href="#"><i class="iconfont icon-tubiao-"></i></a>45674</span> |<span class="s3"><a href="#"><i class="iconfont icon-icon_good"></i></a>78908</span></span>
+                </div>
+                <hr>
+                <div class="kuang5">
+                    <span class="s5"><a href="#">#徐晔#</a> 大家看了《中国医生》纪录片，都被徐晔医生的医术和高颜值的外表圈粉了[好爱哦] ​​​​​​​​</span>
+                    <ul>
+                    <li><img src="images/tp9.jpg"></li><li><img src="images/tp10.jpg"></li><li><img src="images/tp11.jpg"></li><li><img src="images/tp12.jpg"></li>
+                    </ul>
+                    <img src="images/tx3.jpg" class="yuan2">
+                    <span  class="s8">八卦娱乐 2月12日 20:10</span>
+                    <span class="s9"><span class="s3"><a href="#"><i class="iconfont icon-zhuanfa"></i></a>49764</span> | <span class="s3"><a href="#"><i class="iconfont icon-tubiao-"></i></a>45674</span> |<span class="s3"><a href="#"><i class="iconfont icon-icon_good"></i></a>78908</span></span>
+                </div>
+                <hr>
+                <div class="kuang5">
+                    <span class="s5">八姐和碗妹一起呼吁大家：抗击疫情，大家一起！
+                        （希望两只治愈的小可爱可以带给大家一点欢乐[可爱]） ​​​​​​​​</span>
+                    <ul>
+                    <li><img src="images/tp13.jpg"></li><li><img src="images/tp14.jpg"></li><li><img src="images/tp15.jpg"></li><li><img src="images/tp16.jpg"></li>
+                    </ul>
+                    <img src="images/tx4.jpg" class="yuan2">
+                    <span  class="s8">宋茜 2月15日 20:10</span>
+                    <span class="s9"><span class="s3"><a href="#"><i class="iconfont icon-zhuanfa"></i></a>49764</span> | <span class="s3"><a href="#"><i class="iconfont icon-tubiao-"></i></a>45674</span> |<span class="s3"><a href="#"><i class="iconfont icon-icon_good"></i></a>78908</span></span>
+                </div>
+                <hr>
+                <div class="kuang5">
+                    <span class="s5">分享宅家期间,我和小动物最爱吃的菜之一『电饭煲凤爪煲,软软糯糯全是胶原蛋白,下饭或当刷剧零食吃都很好.</span>
+                    <ul>
+                    <li><img src="images/tp17.jpg"></li><li><img src="images/tp18.jpg"></li><li><img src="images/tp19.jpg"></li><li><img src="images/tp20.jpg"></li>
+                    </ul>
+                    <img src="images/tx5.jpg" class="yuan2">
+                    <span  class="s8">日食记 2月15日 20:10</span>
+                    <span class="s9"><span class="s3"><a href="#"><i class="iconfont icon-zhuanfa"></i></a>49764</span> | <span class="s3"><a href="#"><i class="iconfont icon-tubiao-"></i></a>45674</span> |<span class="s3"><a href="#"><i class="iconfont icon-icon_good"></i></a>78908</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="unlogin">
+            <div class="login">
+                <div class="head">账号登录&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp安全登录</div>
+                <div class="kuang1">
+                <span class="yonghu"><i class="iconfont icon-yonghu"></i></span>
+                <span class="mima"><i class="iconfont icon-mima"></i></span>
+                <input type="text" placeholder="邮箱/会员账号/手机账号" class="k">
+                <br><br>
+                <input type="password" placeholder="请输入密码" class="k">
+                <br>
+                <br>
+                &nbsp&nbsp <input type="checkbox">记住我&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <a href="#">忘记密码</a><br><br>
+                <a href="#" class="dl">登录</a><br>
+                &nbsp&nbsp还没有微博?<a href="#">立即注册!</a>
+                <br>
+                <hr>
+                &nbsp&nbsp其他登录:
+                <a href="#"><i class="iconfont icon-taobao2"></i></a>
+                <a href="#"><i class="iconfont icon-qq"></i></a>
+                <a href="#"><i class="iconfont icon-yidong"></i></a>
+                <a href="#"><i class="iconfont icon-zhanghao"></i></a>
+                <a href="#"><i class="iconfont icon-360logo"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="father">
+            <div class="box1">
+                <p>微博热门话题</p>
+                <br>
+                <div><a href="#"><img src="images/新闻1.jpg"></a></div>
+                <div class="kuang2">
+                    <h3><a href="#">#武汉所有住宅小区实行封闭管理#</a></h3>
+                    <div class="flow">阅读2.5亿 讨论3.6万</div>
+                </div>
+                <div><a href="#"><img src="images/新闻2.jpg"></a></div>
+                <div class="kuang2">
+                    <h3><a href="#">#11日武汉拟将完成所有疑似患者检测清零#</a></h3>
+                    <div class="flow">阅读2.3亿 讨论1.4万</div>
+                </div>
+                <div><a href="#"><img src="images/新闻3.jpg"></a></div>
+                <div class="kuang2">
+                    <h3><a href="#">#学生旅客3月31前机票可免费退改签#</a></h3>
+                    <div class="flow">阅读1.8亿 讨论1.7万 </div>
+                </div>
+                <div><a href="#"><img src="images/新闻4.jpg"></a></div>
+                <div class="kuang2">
+                    <h3><a href="#">#爱情公寓5#</a></h3>
+                    <div class="flow">阅读56亿 讨论170.8万</div>
+                </div>
+                <div><a href="#"><img src="images/新闻5.jpg"></a></div>
+                <div class="kuang2">
+                    <h3><a href="#">#武汉排查出1499名重症患者全部入院#</a></h3>
+                    <div class="flow">阅读2.2亿 讨论5.8万</div>
+                </div>
+                <br>
+                <div class="scan">
+                <hr>
+                <a href="#">查看更多></a>
+                </div>
+            </div>
+            <div class="box2">
+                <p>微博实时热点</p>
+                <br>
+                <div><a href="#"><img src="images/实时1.jpg"></a></div>
+                <div class="kuang2">
+                    <h3><a href="#">#尼日利亚爆发不明疾病# ​</a></h3>
+                    <div class="flow">【#尼日利亚爆发不明疾病# 15名患者两日内死亡】2月7日，尼日利亚政府警告称一种不明病症在该国爆发，患者会出现呕吐、腹泻、身体肿胀等症状。1月29日，该国首宗病例出现，不到一周已有至少104人感染，15名患者疑似在感染48小时内不治身亡。初期检测显示该疾病非埃博拉或拉萨热，也与新冠肺炎无关。卫生部长表示疾病可能是捕鱼时所用的化学物所致，尼日利亚参议员呼吁卫生部尽快派专家检查疫区情况。</div>
+                </div>
+                <div><a href="#"><img src="images/实时2.png"></a></div>
+                <div class="kuang2">
+                    <h3><a href="#">#企业复工要为职工配发口罩# </a></h3>
+                    <div class="flow">阅读2.3亿 讨论1.4万</div>
+                </div>
+                <div><a href="#"><img src="images/实时3.png"></a></div>
+                <div class="kuang2">
+                    <h3><a href="#">#国家发改委呼吁不要囤积口罩# ​</a></h3>
+                    <div class="flow">【#国家发改委呼吁不要囤积口罩#】国家发改委社会发展司司长欧晓理呼吁，本次疫情对口罩等防疫物资的需求突然爆发，以全世界目前的产能，供需之间仍存在很大缺口。建议大家不要囤积口罩，囤积太多过了保质期就浪费了。你囤口罩了吗？ #直击抗击新型冠状病毒肺炎疫情#</div>
+                </div>
+                <div><a href="#"><img src="images/实时4.jpg"></a></div>
+                <div class="kuang2">
+                    <h3><a href="#">唐一菲 ​</a></h3>
+                    <div class="flow">
+                        #凌潇肃唐一菲给金银潭医院送年夜饭# 此刻身在武汉的凌潇肃@凌潇肃先生 和@唐一菲 在#天天云时间# 节目中分享：大年三十当天晚上，将家中的肉蛋奶水果等等物资开车送给了处于疫情严重的金银潭医院的医生们[抱抱]当一个姑娘提出想要和他们合影时，一菲说：“别着急，我们等着你们凯旋胜利的消息，等把口罩拿下来，我们再好好合个影</div>
+                </div>
+                <div><a href="#"><img src="images/实时5.jpg"></a></div>
+                <div class="kuang2">
+                    <h3><a href="#">#确诊宝宝看到穿防护服的人会笑# ​</a></h3>
+                    <div class="flow">【#确诊宝宝看到穿防护服的人会笑#：入院6天情况已在好转】广州市妇女儿童医疗中心收治了一名仅两个月大的女宝宝，这是广东目前年龄最小的新冠肺炎确诊病例。入院已6天，宝宝情况已好转，现在一见到护士们就会笑。照顾宝宝的护士彭纷霞说：“我觉得她是把穿着防护服的人都当做了妈妈。” </div>
+                </div>
+                <br>
+                <div class="scan">
+                <hr>
+                <a href="#">查看更多></a>
+                </div>
+            </div>
+            <div class="box3">
+                <p>微博找人</p>
+                <br>
+                <h3>名人</h3>
+                <ul class="list1">
+                    <li><i class="iconfont icon-mingxingstar82"></i><a href="#">明星</a></li>
+                    <li><i class="iconfont icon-shangjie"></i><a href="#">商界</a></li>
+                    <li><i class="iconfont icon-duomeiti-"></i><a href="#">媒体精英</a></li>
+                    <li><i class="iconfont icon-shu"></i><a href="#">作家</a></li>
+                    <li><i class="iconfont icon-icon"></i><a href="#">政府官员</a></li>
+                </ul>
+                <br>
+                <hr>
+                <br>
+                <h3>专家</h3>
+                <ul class="list2">
+                    <li><i class="iconfont icon-yiliao"></i><a href="#">医疗</a></li>
+                    <li><i class="iconfont icon-yueryoudao"></i><a href="#">育儿</a></li>
+                    <li><i class="iconfont icon-shixindiqiu"></i><a href="#">IT互联网</a></li>
+                    <li><i class="iconfont icon-diantai"></i><a href="#">电台</a></li>
+                    <li><i class="iconfont icon-caijing"></i><a href="#">财经</a></li>
+                    <li><i class="iconfont icon-pan_icon"></i><a href="#">教育</a></li>
+                    <li><i class="iconfont icon-falv"></i><a href="#">法律</a></li>
+                    <li><i class="iconfont icon-leimucumeizhuang"></i><a href="#">美妆</a></li>
+                    <li><i class="iconfont icon-weibiaoti-_huabanfuben"></i><a href="#">艺术</a></li>
+                    <li><i class="iconfont icon-sheji"></i><a href="#">设计</a></li>
+                    <li><i class="iconfont icon-building_"></i><a href="#">房产家装</a></li>
+                    <li><i class="iconfont icon-zongjiao"></i><a href="#">宗教</a></li>
+                    <li><i class="iconfont icon-qiche"></i><a href="#">汽车</a></li>
+                    <li><i class="iconfont icon-jiaotong"></i><a href="#">交通</a></li>
+                    <li><i class="iconfont icon-bao"></i><a href="#">职业招聘</a></li>
+                    <li><i class="iconfont icon-xizi-"></i><a href="#">婚庆</a></li>
+                </ul>
+                <br>
+                <hr>
+                <br>
+                <h3>兴趣</h3>
+                <ul class="list3">
+                <li><i class="iconfont icon-leimucumeizhuang"></i><a href="#">时尚</a></li>
+                <li><i class="iconfont icon-zuichun"></i><a href="#">美女</a></li>
+                <li><i class="iconfont icon-dianying"></i><a href="#">电影</a></li>
+                <li><i class="iconfont icon-dianshiju-"></i><a href="#">电视剧</a></li>
+                <li><i class="iconfont icon-yinle"></i><a href="#">音乐</a></li>
+                <li><i class="iconfont icon-dongman"></i><a href="#">动漫</a></li>
+                <li><i class="iconfont icon-youxi"></i><a href="#">游戏</a></li>
+                <li><i class="iconfont icon-_xingzuoyuncheng"></i><a href="#">星座</a></li>
+                <li><i class="iconfont icon-gaoxiao"></i><a href="#">搞笑</a></li>
+                <li><i class="iconfont icon-qinggan"></i><a href="#">情感两性</a></li>
+                <li><i class="iconfont icon-yumaoqiu"></i><a href="#">运动健身</a></li>
+                <li><i class="iconfont icon-_tiyuyundong"></i><a href="#">体育</a></li>
+                <li><i class="iconfont icon-maomi"></i><a href="#">萌宠</a></li>
+                <li><i class="iconfont icon-meishi"></i><a href="#">美食</a></li>
+                <li><i class="iconfont icon-feiji"></i><a href="#">旅游</a></li>
+                <li><i class="iconfont icon-sheying"></i><a href="#">摄影</a></li>
+                <li><i class="iconfont icon-lishi"></i><a href="#">历史</a></li>
+                <li><i class="iconfont icon-junshi"></i><a href="#">军事</a></li>
+                <li><i class="iconfont icon-kexue"></i><a href="#">科学</a></li>
+                <li><i class="iconfont icon-shuma"></i><a href="#">数码</a></li>
+                </ul>
+                <br>
+                <hr>
+                <br>
+                <h3>机构</h3>
+                <ul class="list4">
+                    <li><i class="iconfont icon-zhengwu"></i><a href="#">政务</a></li>
+                    <li><i class="iconfont icon-meiti"></i><a href="#">媒体</a></li>
+                </ul>
+            </div>
+            <div class="box4">
+                <a href="#">DMCA投诉/Reporta</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="footer">
+        <div class="f1">
+        <dl>
+            <dt>微博精彩</dt>
+            <span>
+            <dd>热门微博</dd>
+            <dd>名人堂</dd>
+            <dd>微相册</dd>
+            <dd>微指数</dd>
+            </span>
+            <span>
+            <dd>热门话题</dd>
+            <dd>微博会员</dd>
+            <dd>微游戏</dd>
+            </span>
+        </dl>
+        <dl>
+            <dt>手机玩微博</dt>
+            <span><img src="images/weibo.png"></span>
+            <dd>扫码下载，更多版本</dd>
+            <dd>戳这里</dd>
+        </dl>
+        <dl>
+            <dt>认证&合作</dt>
+            <span>
+            <dd>申请认证</dd>
+            <dd>企业微博</dd>
+            <dd>微博标识</dd>
+            <dd>开放平台</dd>
+            </span>
+            <span>
+            <dd>链接网站</dd>
+            <dd>广告服务</dd>
+            <dd>广告代理商</dd>
+            </span>
+        </dl>
+        <dl>
+            <dt>微博帮助</dt>
+            
+            <dd>微博帮助</dd>
+            <dd>常见问题</dd>
+            <dd>自助服务</dd>
+            <dd>企业&商业热线</dd>
+            <dd>4000-980-980</dd>
+            
+        </dl>
+        </div>
+        <div class="f2">
+            <p><span><img src="images/foot.png"> 微博客服</span> <span>客服热线4000-960-960</span> <span>意见反馈</span> <span>舞弊举报</span> <span>开放平台</span> <span>微博招聘</span> <span>新浪网导航</span> <span>投诉处理大厅</span> <span>DMCA投诉/Report</span>
+               <span> <select>
+                    <option>中文(简体)</option>
+                    <option>中文(臺灣)</option>
+                    <option>中文(香港)</option>
+                    <option>English</option>
+                </select></span>
+            </p>
+            <span class="zd"><a href="#tou"><i class="iconfont icon-fanhuijiantou-copy"></i></a></span>
+            <p><span>京ICP证100780号</span> <span>互联网药品服务许可证</span> <span>互联网医疗保健许可证</span> <span>京网文[2017]10291-1172号</span> <span>京ICP备12002058号</span> <span>增值电信业务经营许可证B2-20140447</span></p>
+            
+            <p><span>互联网新闻信息服务许可编号:11220190001</span> <span>Copyright © 2009-2020 WEIBO 北京微梦创科网络技术有限公司</span> <span><img src="images/police.png"> 京公网安备11000002000019号</span></p>
+    </div>
+</body>
+</html>
